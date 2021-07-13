@@ -1,31 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Fylo data storage component</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <title>Frontend Mentor | Fylo data storage component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url(images/bg-desktop.png) hsl(229, 57%, 9%);
+            background-repeat: no-repeat;
+            background-position: bottom;
+            min-height: 100vh;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .fylo {
+            border: 5px solid rgb(133, 109, 109);
+            border-radius: 5px 25px 5px 5px;
+            display: flex;
+            flex-direction: column;
+            background: hsl(228, 56%, 26%);
+            justify-content: center;
+        }
+        
+        .fylo img {
+            height: 45px;
+            width: 52px;
+        }
+        
+        .myfiles {
+            list-style: none;
+            display: flex;
+        }
+        
+        .myfiles a {
+            border: 6px solid hsl(229, 57%, 11%);
+        }
+        
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
+
 <body>
+    <main class="container">
+        <div class="fylo">
+            <img src="images/logo.svg" alt="logo">
+            <ul class="myfiles">
+                <li>
+                    <a href="#">
+                        <img src="images/icon-document.svg" alt="documents">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/icon-folder.svg" alt="folder">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/icon-upload.svg" alt="upload">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="details">
+            <h5>You’ve used 815 GB of your storage</h5>
+        </div>
+        <div class="available">
+            <strong class="storage"> 185</strong>
+            <span class="storage-avil">Left </span> 0 GB 1000 GB
+        </div>
+    </main>
 
-  You’ve used 815 GB of your storage
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    <!-- <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
 </body>
+
 </html>
