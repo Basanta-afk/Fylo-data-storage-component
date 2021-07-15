@@ -19,18 +19,150 @@
         }
         
         body {
-            border: 2px solid red;
             background: url(images/bg-desktop.png) hsl(229, 57%, 9%);
             background-repeat: no-repeat;
             background-position: bottom;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            justify-content: center;
         }
         
         .container {
             display: flex;
-            border: 1px solid red;
+            justify-content: center;
+            gap: 40px;
+        }
+        
+        .header {
+            border-radius: 10px 80px 10px 10px;
+            background: rgb(3, 3, 5);
+            padding: 30px 10px 30px 30px;
+        }
+        
+        .fylo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 100px;
+            margin-top: 40px;
+        }
+        
+        .menu-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .menu-icon {
+            background: coral;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slider {
+            background: darkcyan;
+            border-radius: 10px;
+            padding: 50px;
+            margin-top: 50px;
+        }
+        
+        .message {
+            color: darkgrey;
+            margin-bottom: 25px;
+        }
+        
+        .highlight {
+            color: cornflowerblue;
+        }
+        
+        .storage-bar {
+            position: relative;
+        }
+        
+        .storage-empty {
+            background: #000;
+            height: 25px;
+            width: 500px;
+            border-radius: 12px;
+        }
+        
+        .storage-used {
+            background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+            height: 25px;
+            border-radius: 12px;
+            width: calc((815/1000)*100%);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        
+        .indicator {
+            background: #fff;
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+        }
+        
+        .storage-label {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 10px;
+            color: darkgrey;
+        }
+        
+        .popup {
+            position: absolute;
+            left: 68%;
+            bottom: calc(100% + 50px);
+        }
+        
+        .hide {
+            display: none;
+        }
+        
+        .storage-empty:hover+.hide {
+            display: block;
+        }
+        
+        .storage-left {
+            position: relative;
+            background: #fff;
+            width: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .storage-left:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            width: 0;
+            height: 0;
+            border: 38px solid transparent;
+            border-top-color: #f5f5f5;
+            border-bottom: 0;
+            border-right: 0;
+            margin-left: -18px;
+            margin-bottom: -20px;
+        }
+        
+        .storage-left-msg {
+            color: black;
+            font-weight: 700;
+            font-size: xx-large;
+        }
+        
+        .msg-left {
+            color: darkgrey;
+            font-size: xx-small;
         }
         
         .attribution {
@@ -58,15 +190,35 @@
                 </div>
             </div>
         </header>
+        <div class="slider">
+            <div class="message">
+                You've used <span class="highlight">815GB</span> of your storage
+            </div>
+            <div class="storage-bar">
+                <div class="storage-empty">
+                    <div class="storage-used">
+                        <div class="indicator"> </div>
+                    </div>
+                </div>
+                <div class="popup hide">
+                    <div class="storage-left">
+                        <span class="storage-left-msg">185</span> GB LEFT
+                    </div>
+                </div>
+            </div>
 
-        <!-- <div class="details">
-            <h5>You’ve used 815 GB of your storage</h5>
-            <p>abcdef</p>
+            <div class="storage-label">
+                <div class="zero-storage">
+                    0 GB
+                </div>
+                <div class="max-storage">
+                    1000 GB
+                </div>
+            </div>
         </div>
-        <div class="available">
-            <strong class="storage"> 185</strong>
-            <span class="storage-avil">Left </span> 0 GB 1000 GB
-        </div> -->
+
+
+
     </main>
 
 
