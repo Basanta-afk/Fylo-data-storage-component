@@ -19,41 +19,18 @@
         }
         
         body {
+            border: 2px solid red;
             background: url(images/bg-desktop.png) hsl(229, 57%, 9%);
             background-repeat: no-repeat;
             background-position: bottom;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
         
         .container {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .fylo {
-            border: 5px solid rgb(133, 109, 109);
-            border-radius: 5px 25px 5px 5px;
-            display: flex;
-            flex-direction: column;
-            background: hsl(228, 56%, 26%);
-            justify-content: center;
-            margin: auto;
-        }
-        
-        .fylo img {
-            height: 45px;
-            width: 52px;
-        }
-        
-        .myfiles {
-            list-style: none;
-            display: flex;
-        }
-        
-        .myfiles a {
-            border: 6px solid hsl(229, 57%, 11%);
+            border: 1px solid red;
         }
         
         .attribution {
@@ -69,33 +46,27 @@
 
 <body>
     <main class="container">
-        <div class="fylo">
-            <img src="images/logo.svg" alt="logo">
-            <ul class="myfiles">
-                <li>
-                    <a href="#">
-                        <img src="images/icon-document.svg" alt="documents">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-folder.svg" alt="folder">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="images/icon-upload.svg" alt="upload">
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="details">
+        <header class="header">
+            <div class="fylo">
+                <div class="logo">
+                    <img src="images/logo.svg" alt="logo">
+                </div>
+                <div class="menu-icons">
+                    <div class="menu-icon"><img src="images/icon-document.svg" alt=""></div>
+                    <div class="menu-icon"><img src="images/icon-folder.svg" alt=""></div>
+                    <div class="menu-icon"><img src="images/icon-upload.svg" alt=""></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- <div class="details">
             <h5>You’ve used 815 GB of your storage</h5>
+            <p>abcdef</p>
         </div>
         <div class="available">
             <strong class="storage"> 185</strong>
             <span class="storage-avil">Left </span> 0 GB 1000 GB
-        </div>
+        </div> -->
     </main>
 
 
